@@ -45,6 +45,7 @@ export class UsersService {
       (user) => user.userId === deleteUserData.userId,
     );
     const user = this.users[userIndex];
+    this.users.splice(userIndex);
     return user;
   }
 }
